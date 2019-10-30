@@ -1,20 +1,32 @@
+import Login from './login.js';
+import Create from './create.js';
+import Cities from './cities.js';
+import Home from './home';
+import NotFoundPage from './notFoundPage.js';
+
 import React, { Component } from 'react';
-import './App.css';
-import Header from './Header.js';
-import StartBrowsing from './StartBrowsing.js';
-import Carousell from './carousel';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+  } from "react-router-dom";
 
-class App extends Component {
+  class App extends Component {
 
-  render() {
-    return (
-        <div className="App">
-          <Header></Header>
-          <StartBrowsing></StartBrowsing>
-          <Carousell></Carousell>
-        </div>
-    );
-  }
-}
-
+    render() {
+      return (
+        <Router>
+          <div>
+            <Switch>
+              <Route exact path="/" ><Home/></Route>
+              <Route path="/login" component={Login} />
+              <Route path="/create" component={Create} />
+              <Route path="/cities" component={Cities} />
+              <Route component={NotFoundPage} />
+            </Switch>
+          </div>
+        </Router>
+        );
+      }
+    }
 export default App;

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-import './StartBrowsing.css';
-import logo from './circled-right-2.png';
+import './css/App.css';
+import './css/StartBrowsing.css';
+import logo from './img/circled-right-2.png';
 import {
-  BrowserRouter as Router,
   Link
 } from "react-router-dom";
 

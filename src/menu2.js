@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import logo from './menu.png';
-import './menu2.css';
+import logo from './img/menu.png';
+import './css/menu2.css';
 import {
-  BrowserRouter as Router,
   Link
 } from "react-router-dom";
 
 class Menu2 extends Component {
   render() {
     return (
-      <div>
+      <div className="menu2">
         <img src={logo} alt="logo" className="menus-logo2" data-toggle="dropdown"/>
         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
          

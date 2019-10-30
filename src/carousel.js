@@ -1,33 +1,35 @@
 import React, { Component } from 'react';
-import logo from './newyork.png';
-import logo1 from './paris.jpg';
-import logo2 from './barcelona.png';
-import logo3 from './bogota.jpg';
-import logo4 from './buenosaires.jpg';
-import logo5 from './caracas.jpg';
-import logo6 from './lapaz.jpg';
-import logo7 from './lima.jpg';
-import logo8 from './mexico.jpg';
-import logo9 from './montevideo.jpg';
-import logo10 from './sanpablo.jpg';
-import logo11 from './Santiago-Chile.jpg';
+import logo from './img/newyork.png';
+import logo1 from './img/paris.jpg';
+import logo2 from './img/barcelona.png';
+import logo3 from './img/bogota.jpg';
+import logo4 from './img/buenosaires.jpg';
+import logo5 from './img/caracas.jpg';
+import logo6 from './img/lapaz.jpg';
+import logo7 from './img/lima.jpg';
+import logo8 from './img/mexico.jpg';
+import logo9 from './img/montevideo.jpg';
+import logo10 from './img/sanpablo.jpg';
+import logo11 from './img/Santiago-Chile.jpg';
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from
 "mdbreact";
-import './carousell.css';
+import './css/carousell.css';
 
 
 class Carousell extends Component {
 
   render() {
     return (
-      
+      <div className="carrusel">
       <MDBContainer>
         <MDBCarousel
         activeItem={1}
         length={3}
         showControls={true}
         showIndicators={true}
+
         >
+        
         <MDBCarouselInner>
           <MDBCarouselItem itemId="1">
             <MDBView>
@@ -92,8 +94,11 @@ class Carousell extends Component {
         </MDBCarouselInner>
       </MDBCarousel>
     </MDBContainer>
+    </div>
         );
+        
   }
+  
 }
 
 export default Carousell;
