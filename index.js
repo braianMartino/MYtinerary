@@ -1,25 +1,11 @@
 const express = require("express");
 const app = express();
-const mongoose = require ("mongoose");
-const Citie= require("./citie");
-const cors = require("cors");
+const db = require('./db');
+const cors = require("cors")
+const routerProduct = require('./product/product.routes')
+
 app.use(cors())
 
-app.get("/",(req,res)=>{
-    res.json("hola").status(200);
-});
+app.use(routerProduct)
 
-
-app.get("/cities",(req,res)=>{
-
-    mongoose.connect('mongodb+srv://braian:mirta1989@mytinerary-xyiit.gcp.mongodb.net/mytinerary?retryWrites=true&w=majority')
-                        
-    .then(()=>{
-        Citie
-            .find({}).then((citiesFinded)=>{res.json(citiesFinded).status(204)})
-    })
-   
-})
-
-app.listen(8080,()=>{console.log("server is up")})
-
+app.listen(8080,()=>{console.log("Server is UP!")})
