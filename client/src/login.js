@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Menu1 from './menu1.js';
-import Menu2 from './menu2.js';
+import Footer from './footer.js';
 
 class Login extends Component {
 
@@ -8,9 +7,8 @@ class Login extends Component {
     return (
 
         <div>
-            <Menu1></Menu1>
-            <Menu2></Menu2>
             <h1>LOG IN</h1>
+            <Footer></Footer>
         </div>
     );
   }

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './css/home.css';
 import Header from './Header.js';
 import StartBrowsing from './StartBrowsing.js';
-import Carousell from './carousel';
+import Footer from './footer';
+import LogCreate from './LogCreate';
 
 class Home extends Component {
 
@@ -11,7 +12,8 @@ class Home extends Component {
         <div className="home">
           <Header></Header>
           <StartBrowsing></StartBrowsing>
-          <Carousell></Carousell>
+          <LogCreate></LogCreate>
+          <Footer></Footer>
         </div>
     );
   }
