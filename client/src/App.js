@@ -10,10 +10,12 @@ import {
     Switch,
     Route
   } from "react-router-dom";
+import City from './city.js';
 
   class App extends Component {
 
     render() {
+      
       return (
         <Router>
           <div>
@@ -21,7 +23,8 @@ import {
               <Route exact path="/" ><Home/></Route>
               <Route path="/login" component={Login} />
               <Route path="/create" component={Create} />
-              <Route path="/cities" component={Cities} />
+              <Route path="/cities" component={Cities} /> 
+              <Route path="/city/:id" component={City} /> 
               <Route component={NotFoundPage} />
             </Switch>
           </div>

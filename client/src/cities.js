@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Footer from './footer.js';
 import './css/cities.css';
+import {
+  Link
+} from "react-router-dom";
 
 class Cities extends Component {
 
@@ -19,19 +22,25 @@ class Cities extends Component {
   }
 
   render() {
+    console.log(this.props)
     return (
 
         <div className="cities">
             <h1>CITIES</h1>
-            <ul>
+            <div>
             {this.state.cities.map((city)=>{
               return (
-                <li key={city._id}>
-                  {city.ciudad}
-                </li>
+                <Link to={`/city/${city._id}`} key={city._id}>
+                  
+                <div  className="li">
+                  <div className="city">
+                    {city.ciudad}
+                  </div>
+                </div>
+                </Link>
               )
             })}
-          </ul>
+          </div>
           <Footer></Footer>
         </div>
     );
