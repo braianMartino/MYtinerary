@@ -12,7 +12,6 @@ class City extends Component {
     }
   }
   componentDidMount(){
-    console.log(this)
     fetch("http://localhost:8080/cities/"+ this.state.id).then((res)=>{
       return res.json();
     }).then((data)=>{
