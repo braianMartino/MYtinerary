@@ -8,7 +8,7 @@ const getCities = (req,res)=>{
 
 const getCity = (req,res)=>{
     City
-    .findOne({_id:req.params.id}).then((cities)=>{res.json(cities).status(204)})
+    .findOne({_id:req.params.id}).populate('itineraries').then((cities)=>{res.json(cities).status(204)})
 }
 
 module.exports = {

@@ -20,6 +20,7 @@ class City extends Component {
   }
 
   render() {
+    console.log(this)
     return (
 
         <div className="cities">
