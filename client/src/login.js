@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
-import Footer from './footer.js';
+import React, { Component } from "react";
+import Footer from "./footer.js";
 
 class Login extends Component {
-
   render() {
     return (
-
-        <div>
-            <h1>LOG IN</h1>
-            <Footer></Footer>
-        </div>
+      <div>
+        <h1>LOG IN</h1>
+        <Footer></Footer>
+      </div>
     );
   }
 }

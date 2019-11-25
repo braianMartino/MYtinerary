@@ -1,19 +1,18 @@
 .browsing-logo {
-    width: 10em;
-    margin-bottom: 2em;
-  }
+  width: 10em;
+  margin-bottom: 2em;
+}
 
-.browsing{
-    text-align: center;
+.browsing {
+  text-align: center;
 }
 
 .browsing p {
-    margin-bottom: 3em;
-    margin-left: 4em;
-    margin-right: 4em;
+  margin-bottom: 3em;
+  margin-left: 4em;
+  margin-right: 4em;
 }
 
-.browsing h3{
-    font-size:22px ;
+.browsing h3 {
+  font-size: 22px;
 }
-

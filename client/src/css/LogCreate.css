@@ -1,18 +1,17 @@
 .texto-logcreate {
-    text-align: center;
-    margin-bottom: 3em;
-
+  text-align: center;
+  margin-bottom: 3em;
 }
 
-.linkUno{
-    position: absolute;
-    text-align: left;
-    margin-left: 20%;
-    margin-bottom: 3em;
+.linkUno {
+  position: absolute;
+  text-align: left;
+  margin-left: 20%;
+  margin-bottom: 3em;
 }
 
-.linkDos{
-    text-align: right;
-    margin-right: 20%;
-    margin-bottom: 3em;
+.linkDos {
+  text-align: right;
+  margin-right: 20%;
+  margin-bottom: 3em;
 }

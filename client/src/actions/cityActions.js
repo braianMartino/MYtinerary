@@ -1,8 +1,6 @@
 const readCities = payload => ({
-    type: 'READ_CITY',
-    payload:payload
-})
+  type: "READ_CITY",
+  payload: payload
+});
 
-export   {
-    readCities
-}
+export { readCities };

@@ -1,17 +1,20 @@
-  
-const City = require("./city.model")
+const City = require("./city.model");
 
-const getCities = (req,res)=>{
-    City
-    .find({}).then((cities)=>{res.json(cities).status(204)})
-}
+const getCities = (req, res) => {
+  City.find({}).then(cities => {
+    res.json(cities).status(204);
+  });
+};
 
-const getCity = (req,res)=>{
-    City
-    .findOne({_id:req.params.id}).populate('itineraries').then((cities)=>{res.json(cities).status(204)})
-}
+const getCity = (req, res) => {
+  City.findOne({ _id: req.params.id })
+    .populate("itineraries")
+    .then(cities => {
+      res.json(cities).status(204);
+    });
+};
 
 module.exports = {
-    getCities,
-    getCity
-}
+  getCities,
+  getCity
+};
