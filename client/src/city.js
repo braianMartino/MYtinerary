@@ -19,31 +19,28 @@ class City extends Component {
       .then(data => {
         this.setState({ city: data });
         this.setState({ itinerario: data.itineraries });
-        console.log(data.itineraries);
+        console.log(data);
       });
   }
 
   render() {
     console.log(this);
     return (
-      <div className="cities">
-        <h1>City</h1>
-        <ul>
-          <li className="li">{this.state.ciudad}</li>
-          <li className="li">
-            {this.state.itinerario.length === 0 &&
-              this.state.itinerario[0] &&
-              this.state.itinerario[0].map(it => {
+      <div>
+        <h1>{this.state.city.ciudad}</h1>
+          
+          <div>
+            {this.state.itinerario.map(it => {
                 return (
-                  <div key={it._id}>
-                    <div className="li">
-                      <div className="city">{it.title}</div>
-                    </div>
-                  </div>
+                  <ul key={it._id}>
+                        <li>{it.title}</li>
+                        <li>{it.profilePic}</li>
+                        <li>{it.price}</li>
+                  </ul>
                 );
               })}
-          </li>
-        </ul>
+          </div>
+
         <Footer></Footer>
       </div>
     );

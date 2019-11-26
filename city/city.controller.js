@@ -8,8 +8,10 @@ const getCities = (req, res) => {
 
 const getCity = (req, res) => {
   City.findOne({ _id: req.params.id })
-    .populate("itineraries")
+    .populate("itineraries ")
     .then(cities => {
+    
+      cities.populate("activities");
       res.json(cities).status(204);
     });
 };
