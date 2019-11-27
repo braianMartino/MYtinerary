@@ -1,8 +1,6 @@
-const router = require('express').Router()
-const activityController = require('./activity.controller')
+const router = require("express").Router();
+const activityController = require("./activity.controller");
 
+-router.get("/activity", activityController.getActivity);
 
-router.get("/activity",activityController.getActivity)
-
-
-module.exports = router
+module.exports = router;

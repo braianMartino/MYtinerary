@@ -1,11 +1,20 @@
-const Itinerary = require('./itinerary.model')
+const Itinerary = require("./itinerary.model");
 
-const getItinerary = (req,res)=>{
-    Itinerary
-    .find({}).populate('activities').then((cities)=>{res.json(cities).status(204)})
-}
+const getItineraries = (req, res) => {
+  Itinerary.find({}).then(cities => {
+    res.json(cities).status(204);
+  });
+};
 
+const getItinerary = (req, res) => {
+  Itinerary.findOne({ _id: req.params.id })
+    .populate("activities")
+    .then(itinerary => {
+      res.json(itinerary).status(204);
+    });
+};
 
 module.exports = {
-    getItinerary
-}
+  getItineraries,
+  getItinerary
+};

@@ -7,6 +7,7 @@ import NotFoundPage from "./notFoundPage.js";
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import City from "./city.js";
+import Itinerary from "./itinerary.js";
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
             <Route path="/create" component={Create} />
             <Route path="/cities" component={Cities} />
             <Route path="/city/:id" component={City} />
+            <Route path="/itineraries/:id" component={Itinerary} />
             <Route component={NotFoundPage} />
           </Switch>
         </div>

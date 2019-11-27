@@ -1,9 +1,7 @@
-  
-const router = require('express').Router()
-const itineraryController = require('./itinerary.controller')
+const router = require("express").Router();
+const itineraryController = require("./itinerary.controller");
 
+router.get("/itineraries", itineraryController.getItineraries);
+router.get("/itineraries/:id", itineraryController.getItinerary);
 
-router.get("/cities/itinerary",itineraryController.getItinerary)
-
-
-module.exports = router
+module.exports = router;

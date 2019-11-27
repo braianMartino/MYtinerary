@@ -1,15 +1,10 @@
-const Activity = require('./activity.model')
+const Activity = require("./activity.model");
 
-const getActivity = (req,res)=>{
-    // Activity
-    // .find({})
-    // .populate('activity')
-    // .then((itineraries)=>{res.json(itineraries).status(204)})
-
-    // Activity
-    // .find({})
-    // .then((itineraries)=>{res.json(itineraries).status(204)})
-}
+const getActivity = (req, res) => {
+  Activity.find({}).then(itineraries => {
+    res.json(itineraries).status(204);
+  });
+};
 module.exports = {
-    getActivity
-}
+  getActivity
+};

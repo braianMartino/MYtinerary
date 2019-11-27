@@ -1,0 +1,56 @@
+.cities h1 {
+  text-align: center;
+}
+
+.li {
+  text-align: center;
+  list-style: none;
+  width: 100%;
+  height: 70px;
+  border: 3px solid black;
+  position: relative;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.city {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 3px solid black;
+  width: 200px;
+  text-align: center;
+}
+
+.FAQ {
+  vertical-align: top;
+  height: auto !important;
+}
+.list {
+  display: none;
+}
+.show {
+  display: none;
+}
+.hide:target + .show {
+  display: block;
+}
+.hide:target {
+  display: none;
+}
+.hide:target ~ .list {
+  display: block;
+}
+
+/*style the (+) and (-) */
+.hide,
+.show {
+  font-size: 10px;
+}
+
+.question {
+  margin-bottom: 25px;
+}
