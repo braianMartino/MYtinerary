@@ -26,9 +26,9 @@ class City extends Component {
   render() {
     console.log(this.state.itinerario);
     return (
-      <div className="cities">
-        <div className="li">
-          <div className="city">{this.state.city.ciudad}</div>
+      <div className="citi">
+        <div className="lis">
+          <div className="ciudad">{this.state.city.ciudad}</div>
         </div>
 
         <div>
@@ -38,33 +38,28 @@ class City extends Component {
         <div>
           {this.state.itinerario.map(it => {
             return (
-              <div className="FAQ">
-                <a href="#hide1" className="hide" id="hide1">
-                  View All
-                </a>
-                <a href="#show1" className="show" id="show1">
-                  Close
-                </a>
-                <div className="question">
-                  <Link to={`/itineraries/${it._id}`} key={it._id}>
-                    <div key={it._id}>
-                      <div>{it.title}</div>
-                      <div>{it.profilePic}</div>
-                      <div>{it.price}</div>
-                    </div>
-                  </Link>
+
+              <div className="tarjeta" key={it._id}>
+                <div className="usuario">
+                  <div className="foto">
+                      fff
+                  </div>
+                  <div>{it.profilePic}</div>
                 </div>
-                <div className="list">
-                  {this.state.itinerario.map(it => {
-                    return (
-                      <Link to={`/itineraries/${it._id}`} key={it._id}>
-                        <div key={it._id}>
-                          <div>{it.nameActivities}</div>
-                        </div>
-                      </Link>
-                    );
-                  })}
+                <div className="datos">
+                  <div className="titulo">{it.title}</div>
+                  <div className="datos2">
+                    <div className="likes">Likes: {it.rating}</div>
+                    <div className="duration">{it.duration} Hours</div>
+                    <div className="price">{it.price}</div>
+                    <div>{it.hashtag}</div>
+                  </div>
+                  
                 </div>
+                <div className="footer" >
+                  <Link to={`/itineraries/${it._id}`}>
+                    <p>View All</p>
+                  </Link></div>  
               </div>
             );
           })}

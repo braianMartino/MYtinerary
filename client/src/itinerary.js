@@ -16,6 +16,7 @@ class Itinerary extends Component {
         return res.json();
       })
       .then(data => {
+        console.log(data)
         this.setState({ itinerary: data.activities });
       });
   }

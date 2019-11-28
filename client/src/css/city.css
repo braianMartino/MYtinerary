@@ -1,8 +1,8 @@
-.cities h1 {
+.citi h1 {
   text-align: center;
 }
 
-.li {
+.lis {
   text-align: center;
   list-style: none;
   width: 100%;
@@ -10,11 +10,9 @@
   border: 3px solid black;
   position: relative;
   display: inline-block;
-  margin-left: 2px;
-  margin-right: 2px;
 }
 
-.city {
+.ciudad {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -25,32 +23,59 @@
   text-align: center;
 }
 
-.FAQ {
-  vertical-align: top;
-  height: auto !important;
-}
-.list {
-  display: none;
-}
-.show {
-  display: none;
-}
-.hide:target + .show {
-  display: block;
-}
-.hide:target {
-  display: none;
-}
-.hide:target ~ .list {
-  display: block;
+.tarjeta{
+  border: 3px solid black;
+  margin-bottom: 3px;
+  font-size: 14px;
+  height: 100px;
 }
 
-/*style the (+) and (-) */
-.hide,
-.show {
-  font-size: 10px;
+.footer{
+  background-color: darkgray;
+  opacity: 0.5;
+  font-size: 12px;
+  height: 25px;
+  margin-top: 3px;
 }
 
-.question {
-  margin-bottom: 25px;
+.footer p{
+  color: blue;
+  text-align: center;
+}
+
+.foto{
+  border-radius: 50%;
+  border: 2px solid black;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  margin-left: 10px;
+}
+.usuario{
+  display: inline-block;
+  padding-left: 10px;
+  width: 35%;
+  font-size: 12px;
+}
+.datos{
+  display: inline-block;
+  width: 65%;
+}
+.titulo{
+  margin-bottom: 3px;
+}
+.likes{
+  display: inline-block;
+  margin-right: 20px;
+}
+.duration{
+  display: inline-block;
+  margin-right: 20px;
+}
+.price{
+  display: inline-block;
+  margin-right: 20px;
+}
+.datos2{
+  font-size: 12px;
 }
