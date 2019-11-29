@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Footer from "./footer.js";
 import "./css/city.css";
 import { Link } from "react-router-dom";
+import logo from "./img/GaudiLover.png";
 
 class City extends Component {
   constructor(props) {
@@ -24,25 +25,22 @@ class City extends Component {
   }
 
   render() {
-    console.log(this.state.itinerario);
+    console.log(this.state.city);
     return (
       <div className="citi">
         <div className="lis">
           <div className="ciudad">{this.state.city.ciudad}</div>
         </div>
-
         <div>
           <p>Available MYtineraries:</p>
         </div>
-
         <div>
           {this.state.itinerario.map(it => {
             return (
-
               <div className="tarjeta" key={it._id}>
                 <div className="usuario">
                   <div className="foto">
-                      fff
+                    <img src={logo} alt="logo" />
                   </div>
                   <div>{it.profilePic}</div>
                 </div>
@@ -54,17 +52,15 @@ class City extends Component {
                     <div className="price">{it.price}</div>
                     <div>{it.hashtag}</div>
                   </div>
-                  
                 </div>
                 <div className="footer" >
-                  <Link to={`/itineraries/${it._id}`}>
+                  <Link to={`/itineraries/${it._id}/${this.state.city.ciudad}/${this.state.id}`}>
                     <p>View All</p>
-                  </Link></div>  
+                  </Link></div>
               </div>
             );
           })}
         </div>
-
         <Footer></Footer>
       </div>
     );

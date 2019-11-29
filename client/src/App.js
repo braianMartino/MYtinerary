@@ -22,7 +22,7 @@ class App extends Component {
             <Route path="/create" component={Create} />
             <Route path="/cities" component={Cities} />
             <Route path="/city/:id" component={City} />
-            <Route path="/itineraries/:id" component={Itinerary} />
+            <Route path="/itineraries/:id/:ciudad?/:idCity?" component={Itinerary} />
             <Route component={NotFoundPage} />
           </Switch>
         </div>
