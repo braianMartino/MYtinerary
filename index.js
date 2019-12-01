@@ -3,7 +3,6 @@ const app = express();
 const db = require("./db");
 const cors = require("cors");
 const bodyParser = require('body-parser');
-const express = require('express');
 const routerCity = require("./city/city.routes");
 const routerItinerary = require("./itinerary/itinerary.routes");
 const routerActivity = require("./activity/activity.routes");
